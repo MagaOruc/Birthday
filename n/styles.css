@@ -6,11 +6,11 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto',sans-serif;
 }
 
 .card {
-    width: 30%;
+    width: 50%;
     height: 60%;
   text-align: center;
   padding: 20px;
@@ -64,7 +64,7 @@ body {
 
 #message {
     font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em;
+  font-size: 15px;
   margin-top: 20px;
   color: white;
   transition: opacity 1s ease-in-out; 

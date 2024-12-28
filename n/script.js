@@ -17,7 +17,7 @@ navigator.mediaDevices
       const volume =
         dataArray.reduce((sum, value) => sum + value, 0) / dataArray.length;
 
-      if (volume > 60) {
+      if (volume > 30) {
         // Üfürmə səviyyəsi
         candles.forEach((candle) => candle.classList.add("off"));
         setTimeout(() => {
@@ -27,7 +27,7 @@ navigator.mediaDevices
       }
     }
 
-    setInterval(detectBlow, 300);
+    setInterval(detectBlow, 100);
   })
   .catch((err) => {
     alert("Demişdim axı Mikrofona giriş icazəsi lazımdır!");
