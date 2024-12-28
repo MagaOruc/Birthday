@@ -1,0 +1,71 @@
+body {
+  background-image: url(./img/son.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 30%;
+    height: 60%;
+  text-align: center;
+  padding: 20px;
+  background: #E75442;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.candles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  padding-top: 30px;
+}
+
+.candle {
+  width: 10px;
+  height: 50px;
+  padding-top: 5px;
+  background: #EFE6CB;
+  position: relative;
+  border-radius: 5px;
+}
+
+.candle::after {
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: yellow;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border-radius: 50%;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.candle.off::after {
+  display: none;
+}
+
+#message {
+    font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: white;
+  transition: opacity 1s ease-in-out; 
+}
